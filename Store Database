@@ -1,0 +1,15 @@
+--Create a store database
+ 
+create table clothing (id integer primary key, item_name "text", price integer, quantity integer, floor integer);
+
+
+insert into clothing values(1,"blouse",10,2,2);
+insert into clothing values(2, "shorts", 20,3,2);
+insert into clothing values(3,"dress",25,3,1);
+insert into clothing values(4,"t-shirt",15,7,1);
+
+
+--display database ordered by price
+select * from clothing order by price;
+
+select item_name,price, sum(quantity) from clothing group by price;
